@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ</title>
+    <style>
+        .persona {
+            font-size: 16px;
+            text-align: center;
+            background: #ebebeb;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #444;
+            max-width: 600px;
+            line-height: 1.6;
+
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    const artistasFamosos = [
+        { nombre: "Ed Sheeran", profesion: "Cantante", pais: "Reino Unido", descripcion: "Ed Sheeran es un cantautor británico conocido por sus melodías pegajosas y letras emotivas.", link: "https://www.edsheeran.com/" },
+        { nombre: "Billie Eilish", profesion: "Cantante", pais: "Estados Unidos", descripcion: "Billie Eilish es conocida por su estilo distintivo y su música que desafía géneros, capturando la atención de jóvenes alrededor del mundo.", link: "https://www.billieeilish.com/" },
+        { nombre: "Daft Punk", profesion: "Dúo Electrónico", pais: "Francia", descripcion: "Este icónico dúo francés ha sido pionero en la música house y electrónica con su sonido futurista y presentaciones enmascaradas.", link: "https://www.daftpunk.com/" },
+        { nombre: "Adele", profesion: "Cantante", pais: "Reino Unido", descripcion: "Adele es mundialmente conocida por su voz profunda y poderosa, y su habilidad para transmitir emociones profundas a través de su música.", link: "https://www.adele.com/" },
+        { nombre: "Jean-Michel Jarre", profesion: "Músico Electrónico", pais: "Francia", descripcion: "Pionero en la música electrónica, Jarre es conocido por sus espectaculares conciertos al aire libre y su innovación en el uso de sintetizadores.", link: "https://jeanmicheljarre.com/" },
+        { nombre: "Rosalía", profesion: "Cantante", pais: "España", descripcion: "Rosalía ha revolucionado el flamenco moderno con influencias de música urbana, convirtiéndose en un fenómeno internacional.", link: "https://www.rosalia.com/" },
+        { nombre: "David Guetta", profesion: "DJ", pais: "Francia", descripcion: "David Guetta ha sido uno de los DJs más influyentes en la escena de la música dance electrónica, colaborando con numerosos artistas top.", link: "https://www.davidguetta.com/" },
+        { nombre: "Shakira", profesion: "Cantante", pais: "Colombia", descripcion: "Shakira es famosa por su música que combina elementos de pop, rock y música latina, y por su habilidad única para el baile.", link: "https://www.shakira.com/" },
+        { nombre: "The Weeknd", profesion: "Cantante", pais: "Canadá", descripcion: "The Weeknd es conocido por su voz única y su estilo R&B que ha influido en la música contemporánea.", link: "https://www.theweeknd.com/" },
+        { nombre: "Kygo", profesion: "DJ", pais: "Noruega", descripcion: "Kygo es un DJ y productor noruego conocido por popularizar el subgénero Tropical House con su sonido relajante y melodioso.", link: "https://www.kygomusic.com/" }
+    ];
+
+    const contenedor = document.getElementById('contenedor'); 
+
+    artistasFamosos.forEach(artista => {
+        const div = document.createElement('div');
+        div.className = 'persona';
+
+        div.innerHTML = `<strong>Nombre:</strong> ${artista.nombre} <br>
+                     <strong>Profesión:</strong> ${artista.profesion} <br>
+                     <strong>País:</strong> ${artista.pais} <br>
+                     <strong>Descripción:</strong> ${artista.descripcion} <br>
+                     <strong>Link:</strong> <a href="${artista.link}" target="_blank">Perfil</a>`;
+        contenedor.appendChild(div);
+    });
+
+</script>
